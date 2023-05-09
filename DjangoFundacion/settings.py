@@ -32,15 +32,15 @@ SECRET_KEY = 'django-insecure-d0r29gj(c$z+5g7_!+x=08j2^%$dhq6uin7h4=56zmac$zr7rn
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.localhost']
-
+ALLOWED_HOSTS = ['127.0.0.1']
+# '.localhost'
 MESSAGE_STORAGE = "django.contrib.messages.storage.cookie.CookieStorage"
 
 LOGIN_REDIRECT_URL = 'productito'
 LOGOUT_REDIRECT_URL = '/'
 
-SOCIAL_AUTH_FACEBOOK_KEY = config("FACEBOOK_KEY")
-SOCIAL_AUTH_FACEBOOK_SECRET = config("FACEBOOK_SECRET")
+# SOCIAL_AUTH_FACEBOOK_KEY = config("FACEBOOK_KEY")
+# SOCIAL_AUTH_FACEBOOK_SECRET = config("FACEBOOK_SECRET")
 
 
 SOCIAL_AUTH_RAISE_EXCEPTIONS = False
@@ -98,18 +98,18 @@ TEMPLATES = [
     },
 ]
 
-SOCIAL_AUTH_FACEBOOK_SCOPE = ['email', 'user_link']
+# SOCIAL_AUTH_FACEBOOK_SCOPE = ['email', 'user_link']
 
-SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
-    'fields': 'id, name, email, picture.type(large), link'
-}
+# SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
+#     'fields': 'id, name, email, picture.type(large), link'
+# }
 
-SOCIAL_AUTH_FACEBOOK_EXTRA_DATA = [
-    ('name', 'name'),
-    ('email', 'email'),
-    ('picture', 'picture'),
-    ('link', 'profile_url'),
-]
+# SOCIAL_AUTH_FACEBOOK_EXTRA_DATA = [
+#     ('name', 'name'),
+#     ('email', 'email'),
+#     ('picture', 'picture'),
+#     ('link', 'profile_url'),
+# ]
 
 
 WSGI_APPLICATION = 'DjangoFundacion.wsgi.application'
